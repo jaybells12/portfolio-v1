@@ -1,0 +1,73 @@
+.cert {
+  display: block;
+  width: 100%;
+  filter: opacity(0%);
+  transform: translateX(100%);
+  transition: all 1s ease-out;
+}
+
+.cert a {
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--primary-text);
+  transition: border-color 0.2s ease, color 0.2s ease;
+  border: 2px solid transparent;
+  border-radius: 100vmax;
+  align-items: center;
+}
+
+.cert img {
+  margin: 0 0.5rem 0 1rem;
+  padding: 0.5rem 0;
+  display: inline-block;
+  height: 50px;
+  min-width: 50px;
+}
+.cert span {
+  margin: 0 1rem 0 0.5rem;
+}
+
+.slide,
+.even.slide {
+  transform: translateX(0);
+  filter: opacity(100%);
+}
+
+.cert a:hover {
+  border-color: var(--secondary-text);
+  color: var(--secondary-text);
+}
+.cert a:active {
+  transition: 0s;
+  border-color: var(--tertiary-text);
+  color: var(--tertiary-text);
+}
+
+@media only screen and (min-width: 769px) {
+  #certsPage {
+    gap: 0;
+  }
+  .even a {
+    flex-direction: row-reverse;
+  }
+
+  .even {
+    transform: translateX(-100%);
+    text-align: right;
+  }
+
+  .cert {
+    width: 50%;
+    align-self: flex-end;
+  }
+  .cert.even {
+    align-self: flex-start;
+  }
+  .cert.even img {
+    margin: 0 1rem 0 0.5rem;
+  }
+  .cert.even span {
+    margin: 0 0.5rem 0 1rem;
+  }
+}

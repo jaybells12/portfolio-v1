@@ -1,0 +1,55 @@
+.images-container {
+  position: relative;
+  max-width: 350px;
+  flex-shrink: 0;
+}
+
+.text-container {
+  font-size: 1rem;
+}
+
+.text-container h2 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+}
+
+.text-block {
+  text-align: center;
+  font-size: 1em;
+  line-height: 1.25em;
+  letter-spacing: 1px;
+}
+
+.portrait {
+  image-rendering: optimizeQuality;
+  width: 100%;
+  mask: url("../assets/hex-bdr-fill.svg") no-repeat center / contain;
+  transform: rotate3d(0, 1, 0, -90deg);
+}
+
+.logo {
+  width: 100%;
+  position: absolute;
+  top: 1.5%;
+  left: 0%;
+  z-index: 1;
+}
+
+.hide {
+  transition: all 0.5s linear 1s;
+  transform: rotate3d(0, 1, 0, 90deg);
+  visibility: hidden;
+}
+
+.show {
+  transition: all 0.5s linear 1.5s;
+  transform: rotate3d(0, 1, 0, 0deg);
+}
+
+@media only screen and (min-width: 769px) {
+  #aboutPage {
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+}

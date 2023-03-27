@@ -1,0 +1,211 @@
+.contact--container {
+  position: relative;
+  height: 18.75rem;
+  width: 18.75rem;
+}
+.contact--container p:first-child {
+  font-size: 5.6rem;
+  /* font-variant: small-caps; */
+  /* letter-spacing: -2px; */
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.small {
+  font-size: 0.75em;
+  letter-spacing: -2px;
+}
+.sideways {
+  position: absolute;
+  font-size: 1.4rem;
+  top: 30%;
+  left: 43.5px;
+  transform-origin: 2.8% top;
+}
+.sideways::before {
+  position: absolute;
+  top: -40%;
+  left: -5%;
+  content: "";
+  width: 113%;
+  border-top: 7.5px solid var(--primary-text);
+  z-index: 0;
+}
+
+.contact--container p:nth-child(3) {
+  position: absolute;
+  font-size: 1.15em;
+  line-height: 2.5ch;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+}
+
+#contactPage a {
+  display: block;
+  position: absolute;
+  top: 40%;
+  right: 8%;
+  width: 201px;
+  text-decoration: none;
+  text-align: center;
+  border: 3px double var(--secondary-text);
+  border-radius: 25px;
+  font-size: 1.75rem;
+  font-weight: 500;
+  letter-spacing: 4px;
+  color: var(--secondary-text);
+  padding: 0.75em;
+  cursor: pointer;
+  background: linear-gradient(to top left, #2121216d 50%, var(--primary-bg) 50%)
+    bottom right;
+  background-size: 200% 200%;
+  transition: background-position 0.25s linear;
+}
+
+#contactPage a:hover {
+  background-position: top left;
+}
+
+#contactPage a:active {
+  border-color: var(--tertiary-text);
+  color: var(--tertiary-text);
+}
+
+.letterdrop span {
+  display: inline-block;
+  filter: opacity(0);
+}
+.sideways.play {
+  -webkit-animation: easeOutBounce 1.25s 2s forwards;
+  animation: easeOutBounce 1.25s 2s forwards;
+}
+
+.g1 {
+  animation-duration: 400ms;
+}
+.g2 {
+  animation-duration: 450ms;
+}
+.g3 {
+  animation-duration: 500ms;
+}
+.g4 {
+  animation-duration: 550ms;
+}
+
+.c1 {
+  transform: translateY(-225px);
+  animation-delay: 2700ms;
+}
+.c2 {
+  transform: translateY(-230px);
+  animation-delay: 2900ms;
+}
+.c3 {
+  transform: translateY(-235px);
+  animation-delay: 2500ms;
+}
+.c4 {
+  transform: translateY(-240px);
+  animation-delay: 3000ms;
+}
+.c5 {
+  transform: translateY(-245px);
+  animation-delay: 2600ms;
+}
+.c6 {
+  transform: translateY(-250px);
+  animation-delay: 2800ms;
+}
+.c7 {
+  transform: translateY(-255px);
+  animation-delay: 3100ms;
+}
+
+.letterdrop.play span {
+  /* animation: dropletter cubic-bezier(0.91, 0.06, 0.81, 0.54) forwards; */
+  animation-name: dropletter;
+  animation-timing-function: cubic-bezier(0.91, 0.06, 0.81, 0.54);
+  animation-fill-mode: forwards;
+}
+
+@keyframes easeOutBounce {
+  0% {
+    -webkit-transform: rotateZ(0);
+    -webkit-animation-timing-function: ease-in;
+    transform: rotateZ(0);
+    animation-timing-function: ease-in;
+  }
+
+  12% {
+    -webkit-transform: rotateZ(9.801deg);
+    -webkit-animation-timing-function: linear;
+    transform: rotateZ(9.801deg);
+    animation-timing-function: linear;
+  }
+
+  24% {
+    -webkit-transform: rotateZ(39.204deg);
+    -webkit-animation-timing-function: linear;
+    transform: rotateZ(39.204deg);
+    animation-timing-function: linear;
+  }
+
+  36% {
+    -webkit-transform: rotateZ(88.209deg);
+    -webkit-animation-timing-function: ease-out;
+    transform: rotateZ(88.209deg);
+    animation-timing-function: ease-out;
+  }
+
+  54% {
+    -webkit-transform: rotateZ(67.518deg);
+    -webkit-animation-timing-function: ease-in;
+    transform: rotateZ(67.518deg);
+    animation-timing-function: ease-in;
+  }
+
+  74% {
+    -webkit-transform: rotateZ(88.533deg);
+    -webkit-animation-timing-function: ease-out;
+    transform: rotateZ(88.533deg);
+    animation-timing-function: ease-out;
+  }
+
+  82% {
+    -webkit-transform: rotateZ(84.375deg);
+    -webkit-animation-timing-function: ease-in;
+    transform: rotateZ(84.375deg);
+    animation-timing-function: ease-in;
+  }
+
+  92% {
+    -webkit-transform: rotateZ(89.406deg);
+    -webkit-animation-timing-function: ease-out;
+    transform: rotateZ(89.406deg);
+    animation-timing-function: ease-out;
+  }
+
+  96% {
+    -webkit-transform: rotateZ(88.614deg);
+    -webkit-animation-timing-function: ease-in;
+    transform: rotateZ(88.614deg);
+    animation-timing-function: ease-in;
+  }
+
+  100% {
+    -webkit-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+  }
+}
+
+@keyframes dropletter {
+  90% {
+    filter: opacity(100%);
+  }
+  100% {
+    transform: translateX(0);
+    filter: opacity(100%);
+  }
+}
